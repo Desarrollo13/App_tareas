@@ -1,0 +1,100 @@
+ <!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks App</title>
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/lux/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!-- Voy hacer el menu de navegacion -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a href="#" class="navbar-brand">Tasks App</a>
+      <!-- le voy dar un margen automatico a la decha con ml-auto -->
+      <ul class="navbar-nav ml-auto">
+        <!-- voy a crear un formulario -->
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            type="search"
+            id="search"
+            class="form-control mr-sm-2"
+            placeholder="Search You Task"
+          />
+          <button class="btn btn-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </ul>
+    </nav>
+    <!-- Voy a crear una clase container sirve para relalizar un espaciado entre nuestro contenido -->
+
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-md-5">
+          <!-- mi formulario lo voy poner dentro de una tarjeta card-->
+          <div class="card">
+            <div class="card-body">
+              <!-- el formulario no va tener la funcion action por que esta refresaca la pagina -->
+              <form class="task-form">
+                <!-- voy tener que crea form-group para separar los input-->
+                <div class="form-group">
+                  <input
+                    type=""
+                    id="name"
+                    placeholder="Task Name"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    id="description"
+                    cols="30"
+                    rows="10"
+                    class="form-control"
+                    placeholder="Task Descritpion"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-block text-center"
+                >
+                  Sace Task
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="card my-4" id="task-result">
+            <div class="card-body">
+              <!-- voy crear la ul para almacenar las tareas que busque -->
+              <ul id="container"></ul>
+            </div>
+          </div>
+          <!-- Vamos a crear una tabla aca -->
+          <table class="table table-bordered tabla-sm">
+            <thead>
+              <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Descritpion</td>
+              </tr>
+            </thead>
+            <!-- con el tbody mostramos el contenido -->
+            <tbody id="tasks"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+
+
+  </body>
+</html>  
